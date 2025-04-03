@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zetamac Results Tracker</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Zetamac Results Tracker</h1>
+    
+    <div id="stats-section">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-value" id="total-games">0</div>
+          <div class="stat-label">Games</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" id="high-score">0</div>
+          <div class="stat-label">High Score</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" id="avg-score">0</div>
+          <div class="stat-label">Avg Score</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="settings-section">
+      <div class="form-group">
+        <label>Data to track:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="save-date" checked>
+          <label for="save-date">Date</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="save-score" checked>
+          <label for="save-score">Score</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="save-time" checked>
+          <label for="save-time">Time</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="save-settings" checked>
+          <label for="save-settings">Game Settings</label>
+        </div>
+      </div>
+      
+      <button id="save-settings-button">Save Settings</button>
+      <div id="settings-status" class="status"></div>
+    </div>
+    
+    <div id="results-section">
+      <h2>Your Game History</h2>
+      <div class="results-controls">
+        <button id="clear-results-button">Clear History</button>
+        <button id="export-results-button">Export CSV</button>
+      </div>
+      <div id="results-list"></div>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html>
